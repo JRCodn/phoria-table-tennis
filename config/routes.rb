@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :matches
   resources :players
+
+  post "matches/random_score" => "matches#random_score"
 end

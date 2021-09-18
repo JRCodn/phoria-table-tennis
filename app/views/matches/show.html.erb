@@ -10,6 +10,8 @@
   <%= @match.score %>
 </p>
 
+<%= link_to 'Random score',{ :controller => 'matches', :action => 'random_score', :id => "#{@match.id}" }, method: :post %>
+
 <p>
   <strong>Players:</strong>
   <ul>
