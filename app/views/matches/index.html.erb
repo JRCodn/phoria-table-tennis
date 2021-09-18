@@ -16,7 +16,7 @@
     <% @matches.each do |match| %>
       <tr>
         <td><%= match.players.map(&:full_name).join(' vs ') %></td>
-        <td><%= match.time %></td>
+        <td><%= convert_datetime(match.time) %></td>
         <td><%= match.score %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
