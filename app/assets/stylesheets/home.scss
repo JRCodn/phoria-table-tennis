@@ -1,0 +1,23 @@
+.navbar {
+  font-size: 18px;
+  border: solid;
+  border-radius: 20px;
+  background-color: #A4A7AC;
+  color: #333;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type:none;
+  }
+  .navbar-item  {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-family: verdana, arial, helvetica, sans-serif;
+  }
+}
+.navbar-item:hover{
+    background-color: #FDF7E2!important;
+    color: #333!important;
+}

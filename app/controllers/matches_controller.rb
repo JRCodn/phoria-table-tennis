@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  before_action :set_match, only: %i[ show edit update destroy ]
+  before_action :set_match, only: %i[ show edit update destroy random_score ]
 
   # GET /matches or /matches.json
   def index
@@ -13,6 +13,13 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+  end
+
+  # POST random score for match
+  def random_score
+    @match.update(score: "21-#{rand(1...19)}")
+    @match.save
+    redirect_to matches_path
   end
 
   # GET /matches/1/edit

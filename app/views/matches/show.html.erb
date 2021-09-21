@@ -2,13 +2,15 @@
 
 <p>
   <strong>Time:</strong>
-  <%= @match.time %>
+  <%= convert_datetime(@match.time) %>
 </p>
 
 <p>
   <strong>Score:</strong>
   <%= @match.score %>
 </p>
+
+<%= link_to 'Random score',{ :controller => 'matches', :action => 'random_score', :id => "#{@match.id}" }, method: :post %>
 
 <p>
   <strong>Players:</strong>
